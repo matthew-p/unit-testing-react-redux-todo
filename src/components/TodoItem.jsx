@@ -23,7 +23,10 @@ export default class TodoItem extends React.Component {
                 <button className="destroy"
                         onClick={() => this.props.deleteItem(this.props.id)} ></button>
             </div>
-            <TextInput />
+            <TextInput text={this.props.text}
+                       itemId={this.props.id}
+                       cancelEditing={this.props.cancelEditing}
+                       doneEditing={this.props.doneEditing} />
         </li>
     }
 };
